@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daniel Guibao</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #000;
+      color: #fff;
+    }
+    h1, h2, h3 { color: #fff; }
+    a { color: #fff; text-decoration: underline; }
+
+    .section { padding: 60px 20px; }
+    .container { max-width: 1100px; margin: auto; }
+
+    /* Hero showreel */
+    .hero {
+      position: relative;
+      height: 70vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #111 url("backgrounds/hero-bg.jpg") center/cover no-repeat;
+    }
+    .hero video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: 0.7;
+    }
+    .hero-text {
+      position: absolute;
+      text-align: center;
+      background: rgba(0,0,0,0.7);
+      padding: 20px 40px;
+      border-radius: 12px;
+    }
+    .hero-text h1 { font-size: 42px; margin-bottom: 10px; }
+    .hero-text p { font-size: 18px; margin: 0; }
+
+    /* Info / CV */
+    .info {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    /* Videos (landscape) */
+    .videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    .videos video {
+      width: 100%;
+      border-radius: 10px;
+      background: #111;
+      filter: none; /* black & white effect */
+    }
+
+    /* Reels (portrait) */
+    .reels {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .reels video {
+      width: 100%;
+      aspect-ratio: 9/16;
+      object-fit: cover;
+      border-radius: 10px;
+      background: #111;
+      filter: none(100%);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background: #111;
+    }
+
+  
+    /* Star testimonials */
+    .stars {
+  font-size: 1.2rem;
+  color: gold; /* glowing stars */
+  margin-top: 0.5rem;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  font-style: italic;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+.testimonial h4 {
+  margin-top: 1rem;
+  text-align: right;
+  font-style: normal;
+  opacity: 0.85;
+}
+
+    
+  </style>
+</head>
+<body>
+
+  <!-- HERO with autoplay showreel -->
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="Moving Showreel.mp4" type="video/mp4">
+    </video>
+    <div class="hero-text">
+      <h1>Daniel Guibao</h1>
+      <p>Video Editor • Motion Designer • Storyteller</p>
+    </div>
+  </section>
+
+<!-- About / CV -->
+<section class="section">
+  <div class="container info" style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
+    
+    <!-- Photo Holder -->
+    <div style="flex: 1 1 250px; max-width: 300px;">
+      <img src="Daniel Profile Picture.jpg" alt="Daniel Guibao" style="width:100%; border-radius:12px; object-fit: cover;">
+    </div>
+
+    <!-- About Text -->
+    <div style="flex: 2 1 400px;">
+      <h2>About Me</h2>
+      <p>With 6 years of experience in video editing, I bring stories to life through gaming, commercials, documentaries, and social media content.</p>
+      <p><strong>Skills:</strong> Editing • Color Grading • Motion Graphics • Reels/Vertical Edits</p>
+      <p><strong>Contact:</strong> <a href="mailto:danielguibao@yahoo.com">danielguibao@yahoo.com</a></p>
+
+      <!-- Download CV Button -->
+      <p>
+        <a href="Professional CV Resume.pdf" target="_blank" download 
+           style="display:inline-block; padding:12px 24px; margin-top:10px; 
+                  background:#fff; color:#000; text-decoration:none; font-weight:bold; 
+                  border-radius:8px; transition:0.3s;">
+          📄 Download CV
+        </a>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Featured Projects (landscape) -->
+  <section class="section" style="background:url('Backround 1.jpg') center/cover no-repeat fixed;">
+    <div class="container">
+      <h2>Long-Form / 16:9 Aspect Ratio Projects</h2>
+      <div class="videos">
+        <div>
+          <h3>Gaming Intro for KTG Gaming</h3>
+          <video controls poster="Gaming intro for KTG Gaming THUMBNAIL.jpg">
+            <source src="Gaming intro for KTG Gaming.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div>
+          <h3>Local Commercial Project</h3>
+          <video controls poster="Local Commercial Project THUMBNAIL.jpg">
+            <source src="Local Commercial Project.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reels & Portraits -->
+  <section class="section" style="background:url('Backround 2.jpg') center/cover no-repeat fixed;">
+    <div class="container">
+      <h2>Reels & Social Edits</h2>
+      <div class="reels">
+        <video controls>
+          <source src="Reel 1.mp4" type="video/mp4">
+        </video>
+        <video controls>
+          <source src="Reel 2.mp4" type="video/mp4">
+        </video>
+        <video controls>
+          <source src="Reel 3.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+  
+<!-- Testimonials Section with Background Video -->
+<section class="section testimonial-section">
+  <video autoplay muted loop playsinline class="testimonial-bg">
+    <source src="Testimonial Backround Video.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+
+  <div class="container">
+    <h2 style="text-align:center;"></h2>
+    <div class="testimonial-carousel">
+
+      <div class="testimonial active">
+        <p>"Daniel’s editing skills brought my gaming videos to life. He has a great eye for detail and storytelling!"</p>
+        <div class="stars">★★★★★</div>
+        <div class="platform">
+          <img src="YouTube.png" alt="YouTube" style="height:24px;">
+        </div>
+        <h4>- KTG Gaming</h4>
+      </div>
+
+      <div class="testimonial">
+        <p>"The documentary we worked on turned out amazing. Daniel handled everything professionally and exceeded expectations."</p>
+        <div class="stars">★★★★★</div>
+        <div class="platform">
+          <img src="Fiverr.png" alt="Fiverr" style="height:24px;">
+        </div>
+        <h4>- Film Director</h4>
+      </div>
+
+      <div class="testimonial">
+        <p>"Fast, creative, and reliable. Daniel is my go-to editor for social media promos."</p>
+        <div class="stars">★★★★☆</div>
+        <div class="platform">
+          <img src="Fiverr.png" alt="Fiverr" style="height:24px;">
+        </div>
+        <h4>- Marketing Manager</h4>
+      </div>
+
+      <div class="testimonial">
+        <p>"Daniel turned around edits quickly without compromising quality. Great to work with!"</p>
+        <div class="stars">★★★★★</div>
+        <div class="platform">
+          <img src="Fiverr.png" alt="Fiverr" style="height:24px;">
+        </div>
+        <h4>- Corporate Client</h4>
+      </div>
+
+      <div class="testimonial">
+        <p>"Super creative! The commercial edit boosted our campaign’s reach and engagement."</p>
+        <div class="stars">★★★★★</div>
+        <div class="platform">
+          <img src="Facebook.png" alt="Facebook" style="height:24px;">
+        </div>
+        <h4>- Advertising Agency</h4>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <div class="carousel-controls">
+      <button class="prev">❮</button>
+      <button class="next">❯</button>
+    </div>
+    <div class="carousel-dots"></div>
+  </div>
+</section>
+
+<style>
+/* Background video */
+.testimonial-section {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+.testimonial-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7); /* dark overlay for readability */
+  z-index: -1;
+}
+
+<style>
+/* Carousel Styling */
+.testimonial-carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+.testimonial {
+  display: none;
+  background: rgba(255,255,255,0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  font-style: italic;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.testimonial.active {
+  display: block;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.carousel-controls {
+  text-align: center;
+  margin-top: 1rem;
+}
+.carousel-controls button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.carousel-controls button:hover {
+  color: gold;
+}
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+.carousel-dots span {
+  display: inline-block;
+  width: 10px; height: 10px;
+  margin: 0 5px;
+  background: #555;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.carousel-dots .active-dot {
+  background: gold;
+}
+</style>
+
+<script>
+// Carousel functionality
+const testimonials = document.querySelectorAll(".testimonial");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+const dotsContainer = document.querySelector(".carousel-dots");
+let current = 0;
+
+// Generate dots
+testimonials.forEach((_, i) => {
+  const dot = document.createElement("span");
+  if (i === 0) dot.classList.add("active-dot");
+  dotsContainer.appendChild(dot);
+});
+
+const dots = dotsContainer.querySelectorAll("span");
+
+function showTestimonial(index) {
+  testimonials.forEach((t, i) => {
+    t.classList.remove("active");
+    dots[i].classList.remove("active-dot");
+    if (i === index) {
+      t.classList.add("active");
+      dots[i].classList.add("active-dot");
+    }
+  });
+}
+
+prevBtn.addEventListener("click", () => {
+  current = (current - 1 + testimonials.length) % testimonials.length;
+  showTestimonial(current);
+});
+
+nextBtn.addEventListener("click", () => {
+  current = (current + 1) % testimonials.length;
+  showTestimonial(current);
+});
+
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    current = i;
+    showTestimonial(current);
+  });
+});
+
+// Auto-slide
+setInterval(() => {
+  current = (current + 1) % testimonials.length;
+  showTestimonial(current);
+}, 6000);
+</script>
+
+
+
+  <!-- Footer -->
+  <footer>
+    © <span id="year"></span> Daniel Guibao — Video Editor
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+
